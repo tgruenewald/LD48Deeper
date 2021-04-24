@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5844461702851564157}
   - component: {fileID: 5844461702851564154}
   - component: {fileID: 5844461702851564155}
+  - component: {fileID: 6144155607536225956}
   m_Layer: 0
   m_Name: prop_block_1
   m_TagString: Untagged
@@ -878,3 +879,21 @@ PolygonCollider2D:
       - {x: -5.31, y: 3.79}
       - {x: -5.31, y: 3.77}
       - {x: -5.2999997, y: 3.77}
+--- !u!255 &6144155607536225956
+FixedJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844461702851564152}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 2.785, y: -1.461}
+  m_DampingRatio: 0
+  m_Frequency: 0
