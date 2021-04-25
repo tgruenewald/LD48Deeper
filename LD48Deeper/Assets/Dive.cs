@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Dive : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,6 +16,8 @@ public class Dive : MonoBehaviour
         GameObject submarine = GameObject.Find("submarine");
         Submarine subCode = submarine.GetComponent<Submarine>();
         subCode.countChildren();
+
+        
 
         Physics2D.autoSimulation = true;
         // Physics2D.Simulate();

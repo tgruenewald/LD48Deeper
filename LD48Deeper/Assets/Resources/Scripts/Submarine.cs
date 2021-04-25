@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Submarine : MonoBehaviour
 {
@@ -11,13 +12,25 @@ public class Submarine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        countChildren();
+//        countChildren();
+
+    }
+    public IEnumerator stats() {
+        while (true) {
+            yield return new WaitForSeconds(1f);
+            oxygen -= 1;
+            GameObject.Find("Power").GetComponent<Text>().text = "Power: " + energy;
+            GameObject.Find("Health").GetComponent<Text>().text = "Health: " + health;
+            GameObject.Find("Oxygen").GetComponent<Text>().text = "Oxygen: " + oxygen;
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        oxygen -= 1;
+        
+        
     }
     public void countChildren()
     {
@@ -41,6 +54,7 @@ public class Submarine : MonoBehaviour
                 oxygen += 25;
             }
         }
+        StartCoroutine(stats());
     }
     public float getEnergy()
     {
