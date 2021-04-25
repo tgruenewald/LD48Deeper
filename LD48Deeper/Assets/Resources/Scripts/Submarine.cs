@@ -17,7 +17,7 @@ public class Submarine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        oxygen -= 1;
     }
     void countChildren()
     {
@@ -34,6 +34,11 @@ public class Submarine : MonoBehaviour
             {
                 print("add Energy");
                 energy += 25;
+            }
+            if(child.CompareTag("O2"))
+            {
+                print("air present");
+                oxygen += 25;
             }
         }
     }
