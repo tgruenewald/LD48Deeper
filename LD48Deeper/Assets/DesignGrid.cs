@@ -5,6 +5,7 @@ using UnityEngine;
 public class DesignGrid : MonoBehaviour
 {
     public string current_block = null;
+    public GameObject current_cell = null;
     // Start is called before the first frame update
     void Start()
     {
