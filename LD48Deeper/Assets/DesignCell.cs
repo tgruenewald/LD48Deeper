@@ -10,6 +10,7 @@ public class DesignCell : MonoBehaviour
 
     DesignGrid designGrid = null;
 
+    GameObject submarine = null;
     string this_current_block = null;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class DesignCell : MonoBehaviour
     private void OnMouseDown()
     {
         designGrid = transform.parent.gameObject.transform.parent.gameObject.GetComponent<DesignGrid>();
+        submarine = GameObject.Find("submarine");
         designGrid.current_cell = this.gameObject;
         Debug.Log("Putting down a block:  " + designGrid.current_block);
         if (designGrid.current_block == null || (this_current_block != null && this_current_block == designGrid.current_block)) {
@@ -32,6 +34,7 @@ public class DesignCell : MonoBehaviour
                 Destroy(block);
             }
             block = (GameObject) Instantiate(Resources.Load("prefab/"+ designGrid.current_block+"_part"), GetComponent<Transform>().position, GetComponent<Transform>().rotation) ;
+            block.transform.parent = submarine.transform;
             this_current_block = designGrid.current_block;
             targetRotation = block.transform.rotation;
         }
