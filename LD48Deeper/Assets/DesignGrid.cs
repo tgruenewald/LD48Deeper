@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Background : MonoBehaviour
+public class DesignGrid : MonoBehaviour
 {
+    public string current_block = null;
     // Start is called before the first frame update
     void Start()
     {
         
-    }
-
-    private void OnMouseDown()
-    {
-        Debug.Log("Restoring cursor");
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); 
     }
 
     // Update is called once per frame

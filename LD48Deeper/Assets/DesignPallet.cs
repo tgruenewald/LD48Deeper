@@ -17,6 +17,10 @@ public class DesignPallet : MonoBehaviour
     {
         Debug.Log(subPart + "Clicked");
         Cursor.SetCursor(Resources.Load(subPart + "_cursor") as Texture2D, hotSpot, cursorMode );
+        DesignGrid designGrid = GetComponentInParent<Pallet>().designGrid; //transform.parent.GetComponent<DesignGrid>();
+        
+
+        designGrid.current_block = subPart;
     }
 
     // Update is called once per frame
