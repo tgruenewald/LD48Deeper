@@ -11,7 +11,10 @@ public class DesignGrid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Turning off physics");
+        Physics2D.autoSimulation = false;
+        // Physics2D.simulationMode = SimulationMode2D.Script;
+        // Physics2D.autoSimulate = false;
     }
 
     // Update is called once per frame

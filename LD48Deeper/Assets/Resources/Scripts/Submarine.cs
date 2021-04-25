@@ -19,7 +19,7 @@ public class Submarine : MonoBehaviour
     {
         oxygen -= 1;
     }
-    void countChildren()
+    public void countChildren()
     {
         foreach(Transform child in transform)
         {
