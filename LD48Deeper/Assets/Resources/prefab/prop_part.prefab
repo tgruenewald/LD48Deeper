@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5844461702851564155}
   - component: {fileID: 6144155607536225956}
   m_Layer: 0
-  m_Name: prop_block_1
-  m_TagString: Untagged
+  m_Name: prop_part
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,6 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -102,7 +101,7 @@ MonoBehaviour:
   thrust: 1
   efficency: 1
   energy: 50
-  submarine: {fileID: 0}
+  keyCode: 119
 --- !u!50 &5844461702851564154
 Rigidbody2D:
   serializedVersion: 4
@@ -115,7 +114,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.224127
+  m_Mass: 0.22391428
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -894,6 +893,6 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.785, y: -1.461}
+  m_ConnectedAnchor: {x: -14.328379, y: -7.3265276}
   m_DampingRatio: 0
   m_Frequency: 0

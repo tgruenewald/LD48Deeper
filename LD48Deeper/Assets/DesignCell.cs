@@ -45,16 +45,38 @@ public class DesignCell : MonoBehaviour
     void Update()
     {
         if (designGrid != null && designGrid.current_cell == this.gameObject) {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Debug.Log("Pressing A");
                 targetRotation *=  Quaternion.AngleAxis(5, Vector3.forward);
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 Debug.Log("Pressing D");
                 targetRotation *=  Quaternion.AngleAxis(-5, Vector3.forward);
             }
+            
+            if (block != null && block.tag == "Prop" && Input.GetKeyDown(KeyCode.A)) 
+            {
+                Propeller propeller = block.GetComponent<Propeller>();
+                propeller.keyCode = KeyCode.A;
+            }
+            if (block != null && block.tag == "Prop" && Input.GetKeyDown(KeyCode.S)) 
+            {
+                Propeller propeller = block.GetComponent<Propeller>();
+                propeller.keyCode = KeyCode.S;
+            }
+            if (block != null && block.tag == "Prop" && Input.GetKeyDown(KeyCode.D)) 
+            {
+                Propeller propeller = block.GetComponent<Propeller>();
+                propeller.keyCode = KeyCode.D;
+            }
+            if (block != null && block.tag == "Prop" && Input.GetKeyDown(KeyCode.F)) 
+            {
+                Propeller propeller = block.GetComponent<Propeller>();
+                propeller.keyCode = KeyCode.F;
+            }                                
+
             if (block != null)
             {
                 block.transform.rotation= Quaternion.Lerp (block.transform.rotation, targetRotation , 10 * smooth * Time.deltaTime);

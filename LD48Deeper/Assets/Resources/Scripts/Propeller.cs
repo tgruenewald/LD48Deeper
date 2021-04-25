@@ -7,6 +7,8 @@ public class Propeller : MonoBehaviour
     public float thrust;
     public float efficency;
     public float energy; //this is a placeholder
+
+    public KeyCode keyCode = KeyCode.W;
     //public GameObject submarine;
     // Start is called before the first frame update
     void Start()
@@ -19,13 +21,13 @@ public class Propeller : MonoBehaviour
     void FixedUpdate()
     {
         energy = transform.GetComponentInParent<Submarine>().getEnergy();
-        if (Input.GetKey(KeyCode.W) && energy > 0.0)
+        if (Input.GetKey(keyCode) && energy > 0.0)
         {
             
             Vector2 dir = transform.GetComponent<Rigidbody2D>().GetRelativeVector(Vector2.up);
             transform.GetComponent<Rigidbody2D>().AddForce(dir * thrust);
             transform.GetComponentInParent<Submarine>().setEnergy(energy - efficency);
-            print("vrrrooom");
+            print("vrrrooom: " + keyCode);
         }
        
         

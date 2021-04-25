@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Batt1
+  - O2
+  - Hull 1
+  - Prop
   layers:
   - Default
   - TransparentFX
